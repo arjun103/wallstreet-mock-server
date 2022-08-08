@@ -1,0 +1,6 @@
+FROM amazoncorretto:11.0.9
+EXPOSE 8000
+RUN mkdir -p tmp/scripts
+RUN mkdir -p tmp/logs
+COPY wallstreet-mock-server-0.0.1-SNAPSHOT.jar app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
